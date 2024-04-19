@@ -1,5 +1,5 @@
 import { ReactNode, type ComponentPropsWithoutRef } from 'react';
-import { cn } from '../../utils/cn';
+import { cn } from '../utils/cn';
 import { Link } from '@tanstack/react-router';
 
 type ButtonProps = {
