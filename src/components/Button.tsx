@@ -30,7 +30,7 @@ const Button = (props: LinkProps | ButtonProps) => {
     return (
       <button
         className={cn(
-          'bg-darkprimary hover:bg-primary px-6 py-3 text-white',
+          'bg-darkprimary hover:bg-primary px-6 py-3 text-white md:w-fit',
           className,
         )}
         {...props}

@@ -5,7 +5,7 @@
 @layer base {
   :root {
     background-color: white;
-    color: black;
+    color: #2a254b;
     border: #cac6da;
   }
   html {

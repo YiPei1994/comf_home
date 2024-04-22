@@ -1,23 +1,29 @@
-// Example: A Card component that has multiple "slots" for content
-// Main slot => children prop
-// Actions slot => actions prop
+import { LuSprout } from 'react-icons/lu';
+import { FaCreditCard } from 'react-icons/fa';
+import { TbTruckDelivery } from 'react-icons/tb';
+import { CiCircleCheck } from 'react-icons/ci';
 
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
 
 type CardProps = {
   title: string;
   children: ReactNode;
-  // "actions" is like an extra "slot" of this component
-  // It's the same type as the children prop, since we expect JSX code as a prop value
-  actions: ReactNode;
+  icon?: string;
 };
 
-export function Card({ title, children, actions }: CardProps) {
+export function Card({ title, children, icon }: CardProps) {
   return (
-    <section>
-      <h2>{title}</h2>
+    <section className="bg-side flex flex-col gap-6 p-8 md:w-2/5 xl:w-[22%]">
+      {icon === 'delivery' && (
+        <TbTruckDelivery className="text-darkprimary h-8 w-8" />
+      )}{' '}
+      {icon === 'check' && (
+        <CiCircleCheck className="text-darkprimary h-8 w-8" />
+      )}{' '}
+      {icon === 'card' && <FaCreditCard className="text-darkprimary h-8 w-8" />}{' '}
+      {icon === 'sprout' && <LuSprout className="text-darkprimary h-8 w-8" />}{' '}
+      <h4>{title}</h4>
       {children}
-      {actions}
     </section>
   );
 }
