@@ -4,6 +4,7 @@ import Hero from './Hero';
 import Features from './Features';
 import ProductList from './ProductList';
 import KnowMe from './KnowMe';
+import Contact from './Contact';
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
       <Features />
       <ProductList />
       <KnowMe />
+      <Contact />
     </div>
   );
 }

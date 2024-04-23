@@ -10,7 +10,7 @@ function Block({ className, children }: BlockProps) {
   return (
     <section
       className={cn(
-        'flex flex-col gap-6 p-12 md:items-center md:justify-center lg:gap-12 lg:p-16',
+        'flex flex-col gap-6 p-6 md:items-center md:justify-center md:p-12 lg:gap-12 lg:p-16',
         className,
       )}
     >
