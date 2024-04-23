@@ -95,6 +95,9 @@
   .text-primary {
     color: #4e4d93;
   }
+  .text-side {
+    color: #f9f9f9;
+  }
   .bg-side {
     background-color: #f9f9f9;
   }

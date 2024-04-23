@@ -13,7 +13,7 @@ type CardProps = {
 
 export function Card({ title, children, icon }: CardProps) {
   return (
-    <section className="bg-side flex flex-col gap-6 p-8 md:w-2/5 xl:w-[22%]">
+    <section className="bg-side flex flex-col  gap-6 p-8 md:w-[45%] lg:w-[22%]">
       {icon === 'delivery' && (
         <TbTruckDelivery className="text-darkprimary h-8 w-8" />
       )}{' '}

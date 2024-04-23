@@ -1,3 +1,4 @@
+import Block from '../../components/Block';
 import Button from '../../components/Button';
 import { productsData } from '../../utils/Data';
 import { shuffleProduct } from '../../utils/helper';
@@ -6,14 +7,16 @@ import { Product } from '../../utils/types';
 function ProductList() {
   const selected = shuffleProduct(productsData, 4);
   return (
-    <div className="flex flex-col gap-6 p-6 md:items-center md:justify-center lg:gap-12">
-      <div className="flex w-full flex-wrap justify-center gap-4 lg:justify-between lg:gap-8">
+    <Block>
+      <div className="flex w-full flex-wrap justify-between gap-4 lg:justify-between lg:gap-8">
         {selected.map((product) => (
           <ProductItem key={product.id} product={product} />
         ))}
       </div>
-      <Button type="button">View colletion</Button>
-    </div>
+      <Button type="button" className="bg-side text-darkprimary">
+        View colletion
+      </Button>
+    </Block>
   );
 }
 
