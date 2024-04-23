@@ -24,10 +24,10 @@ function Welcome() {
         </div>
         <Button
           onClick={() => setShowSlide((d) => !d)}
-          className="mt-[50px] bg-transparent lg:mt-[30px] xl:mt-0"
+          className="text-primary mt-[50px]  bg-transparent  text-4xl  hover:bg-transparent hover:text-white lg:mt-[30px] xl:mt-0 "
           type="button"
         >
-          <MdArrowUpward className="text-primary animate-bounce text-4xl" />
+          <MdArrowUpward className="animate-bounce" />
         </Button>
       </div>
     </div>
