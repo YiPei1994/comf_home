@@ -6,7 +6,7 @@ function Contact() {
   return (
     <Block className="bg-[url('/web/contactImage.svg')] bg-cover bg-center bg-no-repeat">
       <div className="text-side mx-auto flex max-w-[500px] flex-col gap-6 md:text-center">
-        <h3>Join the club and get the benefits</h3>
+        <h2>Join the club and get the benefits</h2>
         <p>
           Sign up for our newsletter and receive exclusive offers on new ranges,
           sales, pop up stores and more

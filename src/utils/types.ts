@@ -5,3 +5,9 @@ export type Product = {
   price: number;
   desription: string;
 };
+
+export type ProdcutLink = {
+  id: number;
+  name: string;
+  to: string;
+};

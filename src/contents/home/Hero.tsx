@@ -4,7 +4,7 @@ import Container from '../../components/Container';
 function Hero() {
   return (
     <Container className="relative">
-      <div className="mx-auto flex flex-col gap-6 bg-white px-8 py-12 md:absolute md:right-[10%] md:top-[50%] md:w-2/4 md:-translate-y-[50%]  lg:px-16 lg:py-16 xl:right-[5%]">
+      <div className="mx-auto flex flex-col gap-6 bg-white px-6 py-12 md:absolute md:right-[10%] md:top-[50%] md:w-2/4 md:-translate-y-[50%]  lg:px-16 lg:py-16 xl:right-[5%]">
         <h1 className="md:mb-[5%] xl:mb-[15%] xl:text-[32px]">
           Luxury homeware for people who love timeless design quality
         </h1>

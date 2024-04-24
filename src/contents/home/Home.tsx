@@ -5,17 +5,23 @@ import Features from './Features';
 import ProductList from './ProductList';
 import KnowMe from './KnowMe';
 import Contact from './Contact';
+import { useWelcomeWindow } from '../../store/WelcomeWindow';
 
 function Home() {
+  const { show } = useWelcomeWindow();
   return (
-    <div className="">
+    <>
       {createPortal(<Welcome />, document.body)}
-      <Hero />
-      <Features />
-      <ProductList />
-      <KnowMe />
-      <Contact />
-    </div>
+      {!show && (
+        <div className="overflow-hidden">
+          <Hero />
+          <Features />
+          <ProductList />
+          <KnowMe />
+          <Contact />
+        </div>
+      )}
+    </>
   );
 }
 

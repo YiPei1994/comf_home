@@ -2,15 +2,16 @@ import { productsData } from '../../utils/Data';
 import ProductCard from '../../components/ProductCard';
 import { MdArrowUpward } from 'react-icons/md';
 import Button from '../../components/Button';
-import { useState } from 'react';
+
 import { shuffleProduct } from '../../utils/helper';
+import { useWelcomeWindow } from '../../store/WelcomeWindow';
 
 function Welcome() {
-  const [showSlide, setShowSlide] = useState(true);
+  const { show, setShow } = useWelcomeWindow();
   const products = shuffleProduct(productsData, 5);
   return (
     <div
-      className={`${showSlide ? 'top-0' : '-top-full'} absolute left-0 z-40 flex  h-screen  w-full  flex-col items-center justify-center overflow-hidden bg-neutral-900  transition-all duration-300`}
+      className={`${show ? 'top-0' : '-top-full'} absolute left-0 z-40 flex  h-screen  w-full  flex-col items-center justify-center overflow-hidden bg-neutral-900  transition-all duration-300`}
     >
       <div className="flex h-full flex-col items-center justify-center gap-6 px-4 py-[40px] text-center xl:gap-12 xl:py-[80px]">
         <h3 className="text-primary ">Welcome</h3>
@@ -23,7 +24,7 @@ function Welcome() {
           ))}
         </div>
         <Button
-          onClick={() => setShowSlide((d) => !d)}
+          onClick={() => setShow()}
           className="text-primary mt-[50px]  bg-transparent  text-4xl  hover:bg-transparent hover:text-white lg:mt-[30px] xl:mt-0 "
           type="button"
         >

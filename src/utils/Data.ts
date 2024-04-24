@@ -75,3 +75,87 @@ export const features = [
       'We use 100% recycled to ensure our footprint is more manageable',
   },
 ];
+
+export const categories = [
+  {
+    id: 1,
+    name: 'Crokery',
+    to: '',
+  },
+  {
+    id: 2,
+    name: 'Furniture',
+    to: '',
+  },
+  {
+    id: 3,
+    name: 'Homeware',
+    to: '',
+  },
+  {
+    id: 4,
+    name: 'Plant pots',
+    to: '',
+  },
+  {
+    id: 5,
+    name: 'Chairs',
+    to: '',
+  },
+];
+
+export const menu = [
+  {
+    id: 1,
+    name: 'New arrivals',
+    to: '',
+  },
+  {
+    id: 2,
+    name: 'Best sellers',
+    to: '',
+  },
+  {
+    id: 3,
+    name: 'Recently viewed',
+    to: '',
+  },
+  {
+    id: 4,
+    name: 'Popular this week',
+    to: '',
+  },
+  {
+    id: 5,
+    name: 'All products',
+    to: '',
+  },
+];
+
+export const navlinks = [
+  {
+    id: 1,
+    name: 'About us',
+    to: '',
+  },
+  {
+    id: 2,
+    name: 'Vacancies',
+    to: '',
+  },
+  {
+    id: 3,
+    name: 'Contact us',
+    to: '',
+  },
+  {
+    id: 4,
+    name: 'Privacy',
+    to: '',
+  },
+  {
+    id: 5,
+    name: 'Return policy',
+    to: '',
+  },
+];
