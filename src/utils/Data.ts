@@ -2,7 +2,7 @@ export const productsData = [
   {
     id: 1,
     image: '/products/andel_vasse.svg',
-    name: 'Andel Vasse',
+    name: 'Andel Vase',
     price: 95,
     desription: '',
   },

@@ -1,14 +1,15 @@
-import { productsData } from '../../utils/Data';
-import ProductCard from '../../components/ProductCard';
 import { MdArrowUpward } from 'react-icons/md';
 import Button from '../../components/Button';
-
-import { shuffleProduct } from '../../utils/helper';
 import { useWelcomeWindow } from '../../store/WelcomeWindow';
+import RotatingProducts from '../../components/ProductCard';
+import { shuffleProduct } from '../../utils/helper';
+import { productsData } from '../../utils/Data';
 
 function Welcome() {
   const { show, setShow } = useWelcomeWindow();
-  const products = shuffleProduct(productsData, 5);
+
+  const generated = shuffleProduct(productsData, 5);
+
   return (
     <div
       className={`${show ? 'top-0' : '-top-full'} absolute left-0 z-40 flex  h-screen  w-full  flex-col items-center justify-center overflow-hidden bg-neutral-900  transition-all duration-300`}
@@ -18,11 +19,7 @@ function Welcome() {
         <h2 className="bold bold text-white">
           Find your own piece of <span className="text-purple-200">Art</span>
         </h2>
-        <div className="relative my-[20px] flex min-h-[350px] w-[70%] md:min-h-[420px] lg:w-[55%] xl:h-auto xl:w-full xl:gap-16">
-          {products?.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </div>
+        <RotatingProducts products={generated} />
         <Button
           onClick={() => setShow()}
           className="text-primary mt-[50px]  bg-transparent  text-4xl  hover:bg-transparent hover:text-white lg:mt-[30px] xl:mt-0 "

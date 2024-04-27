@@ -1,42 +1,55 @@
 import { useEffect, useState } from 'react';
 import { Product } from '../utils/types';
-import { productsData } from '../utils/Data';
 
-type ProductCardProps = {
-  product: Product;
+type RotatingProductsProps = {
+  products: Product[];
 };
-
-function ProductCard({ product }: ProductCardProps) {
-  const [productNumber, setProductNumber] = useState(1);
-  const length = productsData.length;
+function RotatingProducts({ products }: RotatingProductsProps) {
+  const [productNumber, setProductNumber] = useState(products[0].id);
+  const length = products.length;
   const width = window.innerWidth;
 
   useEffect(() => {
-    if (width < 1650) {
+    if (width < 1650 && length !== 0) {
       const intervalId = setInterval(() => {
-        if (productNumber === length) {
-          setProductNumber(1);
+        if (productNumber === products[length - 1].id) {
+          setProductNumber(products[0].id);
         }
-        setProductNumber((n) => n + 1);
+        setProductNumber((n) => {
+          const currentIndex = products.findIndex(
+            (product) => product.id === n,
+          );
+          const nextIndex = (currentIndex + 1) % length;
+
+          return products[nextIndex].id;
+        });
       }, 3000);
 
       return () => clearInterval(intervalId);
     }
   }, [productNumber]);
-
+  if (length === 0) return;
   return (
-    <div
-      className={`absolute h-full max-h-0 w-full opacity-0 transition-all duration-300 xl:relative ${productNumber === product.id ? 'max-h-auto opacity-100' : ''} ${product.id % 2 === 0 ? 'xl:-top-10' : 'xl:top-10'} xl:max-h-max xl:opacity-100 `}
-    >
-      <div className="mb-4 h-max w-full">
-        <img className="h-auto w-full" src={product.image} alt={product.name} />
-      </div>
-      <div className="text-left text-white">
-        <p className="mb-2">{product.name}</p>
-        <p>€ {product.price}</p>
-      </div>
+    <div className="relative my-[20px] flex min-h-[350px] w-[70%] md:min-h-[420px] lg:w-[55%] xl:h-auto xl:w-full xl:gap-16">
+      {products.map((product) => (
+        <div
+          className={`absolute h-full max-h-0 w-full opacity-0 transition-all duration-300 xl:relative ${productNumber === product.id ? 'max-h-auto opacity-100' : ''} ${product.id % 2 === 0 ? 'xl:-top-10' : 'xl:top-10'} xl:max-h-max xl:opacity-100 `}
+        >
+          <div className="mb-4 h-max w-full">
+            <img
+              className="h-auto w-full"
+              src={product.image}
+              alt={product.name}
+            />
+          </div>
+          <div className="text-left text-white">
+            <p className="mb-2">{product.name}</p>
+            <p>€ {product.price}</p>
+          </div>
+        </div>
+      ))}
     </div>
   );
 }
 
-export default ProductCard;
+export default RotatingProducts;
