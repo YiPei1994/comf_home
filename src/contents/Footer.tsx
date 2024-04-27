@@ -19,7 +19,7 @@ function Footer() {
           <h4>Our company</h4>
         </List>
       </div>
-      <div className="w-full xl:w-1/2 xl:items-start xl:pb-20">
+      <div className="w-full lg:mx-auto lg:max-w-[500px] xl:w-1/2 xl:items-start xl:pb-20">
         <h4 className="text-side">Join our mailing list</h4>
         <SignUp invert={true} />
       </div>

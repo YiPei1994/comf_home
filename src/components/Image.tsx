@@ -4,7 +4,9 @@ type ImageProps = {
 };
 
 function Image({ src, alt }: ImageProps) {
-  return <img className="h-auto w-full" src={src} alt={alt} />;
+  return (
+    <img className="max-h-full max-w-full object-cover" src={src} alt={alt} />
+  );
 }
 
 export default Image;
