@@ -5,7 +5,7 @@ type ImageProps = {
 
 function Image({ src, alt }: ImageProps) {
   return (
-    <img className="max-h-full max-w-full object-cover" src={src} alt={alt} />
+    <img className=" h-full max-w-full object-cover " src={src} alt={alt} />
   );
 }
 

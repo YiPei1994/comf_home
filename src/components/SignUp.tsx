@@ -12,7 +12,7 @@ function SignUp({ invert }: SignUpProps) {
         placeholder="your@email.com"
       />
       <Button
-        className={` ${invert ? 'bg-side text-darkprimary' : 'bg-darkprimary text-side'}w-fit p-4`}
+        className={` ${invert ? 'bg-side text-darkprimary hover:bg-side' : 'bg-darkprimary text-side'}w-fit p-4`}
       >
         Sign Up
       </Button>

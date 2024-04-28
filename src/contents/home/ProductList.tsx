@@ -13,7 +13,10 @@ function ProductList() {
           <ProductItem key={product.id} product={product} />
         ))}
       </div>
-      <Button type="button" className="bg-side text-darkprimary">
+      <Button
+        type="button"
+        className="bg-side text-darkprimary hover:text-side"
+      >
         View colletion
       </Button>
     </Block>

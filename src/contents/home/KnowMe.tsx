@@ -11,7 +11,7 @@ function KnowMe() {
           A global brand with local beginnings, our story begain in a small
           studio in South London in early 2014
         </p>
-        <Button className="text-side bg-primary lg:mt-auto ">
+        <Button className="text-side bg-primary hover:bg-side hover:text-primary lg:mt-auto">
           View collection
         </Button>
       </div>
