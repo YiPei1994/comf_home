@@ -15,7 +15,7 @@ function BlockWithImage({
   return (
     <div
       className={cn(
-        `${reverse ? 'md:flex-row-reverse' : 'md:flex-row'} flex flex-col md:items-stretch `,
+        `${reverse ? 'md:flex-row-reverse' : 'md:flex-row'} flex w-full flex-col md:items-stretch`,
         className,
       )}
     >
