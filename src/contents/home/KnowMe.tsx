@@ -15,8 +15,8 @@ function KnowMe() {
           View collection
         </Button>
       </div>
-      <div className="lg:w-1/2">
-        <Image src="/web/knowImage.svg" alt="know image" />
+      <div className="overflow-hidden lg:w-1/2">
+        <Image src="/web/knowMe.jpg" alt="know image" />
       </div>
     </Block>
   );

@@ -19,7 +19,7 @@ function Hero() {
           View collection
         </Button>
       </div>
-      <div className="h-[300px] w-full  bg-[url('/web/Hero.png')]  bg-cover bg-center bg-no-repeat md:h-[50vh] lg:h-[704px]"></div>
+      <div className="h-[300px] w-full  bg-[url('/web/hero.jpg')]  bg-cover bg-center bg-no-repeat md:h-[50vh] lg:h-[704px]"></div>
     </Container>
   );
 }

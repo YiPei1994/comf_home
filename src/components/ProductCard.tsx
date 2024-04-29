@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Product } from '../utils/types';
+import Image from './Image';
 
 type RotatingProductsProps = {
   products: Product[];
@@ -35,12 +36,8 @@ function RotatingProducts({ products }: RotatingProductsProps) {
         <div
           className={`absolute h-full max-h-0 w-full opacity-0 transition-all duration-300 xl:relative ${productNumber === product.id ? 'max-h-auto opacity-100' : ''} ${product.id % 2 === 0 ? 'xl:-top-10' : 'xl:top-10'} xl:max-h-max xl:opacity-100 `}
         >
-          <div className="mb-4 h-max w-full">
-            <img
-              className="h-auto w-full"
-              src={product.image}
-              alt={product.name}
-            />
+          <div className="mb-4 h-[300px] w-full overflow-hidden">
+            <Image src={product.image} alt={product.name} />
           </div>
           <div className="text-left text-white">
             <p className="mb-2">{product.name}</p>

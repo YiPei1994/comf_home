@@ -1,5 +1,6 @@
 import Block from '../../components/Block';
 import Button from '../../components/Button';
+import Image from '../../components/Image';
 import { productsData } from '../../utils/Data';
 import { shuffleProduct } from '../../utils/helper';
 import { Product } from '../../utils/types';
@@ -32,8 +33,8 @@ type ProductProps = {
 function ProductItem({ product }: ProductProps) {
   return (
     <div className="mb-10 w-[46%] lg:w-[22%]">
-      <div className="mb-4  h-auto w-full">
-        <img className="h-auto w-full" src={product.image} alt={product.name} />
+      <div className="mb-4  h-[300px] w-full overflow-hidden">
+        <Image src={product.image} alt={product.name} />
       </div>
       <div className="text-darkprimary text-left ">
         <p className="mb-2 text-xl">{product.name}</p>
