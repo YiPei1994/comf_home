@@ -5,13 +5,18 @@ export const productsData = [
     name: 'Andel Vase',
     price: 95,
     desription: '',
+    traits: [],
+    dimesions: [],
   },
   {
     id: 2,
     image: '/products/lamp.jpg',
     name: 'Next Lamp',
     price: 250,
-    desription: '',
+    desription:
+      'A timeless design, with premium materials features as one of our most popular and iconic pieces. The dandy chair is perfect for any stylish living space with beech legs and lambskin leather upholstery.',
+    dimesions: ['110cm', '75cm', '50cm'],
+    traits: [],
   },
   {
     id: 3,
@@ -19,13 +24,22 @@ export const productsData = [
     name: 'Stand Tall',
     price: 250,
     desription: '',
+    traits: [],
+    dimesions: [],
   },
   {
     id: 4,
     image: '/products/dandy_chair.jpg',
     name: 'Dandy Chair',
     price: 250,
-    desription: '',
+    desription:
+      'A timeless design, with premium materials features as one of our most popular and iconic pieces. The dandy chair is perfect for any stylish living space with beech legs and lambskin leather upholstery.',
+    traits: [
+      'Premium material',
+      'Handmade upholstery',
+      'Quality timeless classic',
+    ],
+    dimesions: ['110cm', '75cm', '50cm'],
   },
   {
     id: 5,
@@ -33,6 +47,8 @@ export const productsData = [
     name: 'Stanley Table',
     price: 250,
     desription: '',
+    traits: [],
+    dimesions: [],
   },
   {
     id: 6,
@@ -40,6 +56,8 @@ export const productsData = [
     name: 'Rustic Vase Set',
     price: 155,
     desription: '',
+    traits: [],
+    dimesions: [],
   },
   {
     id: 7,
@@ -47,6 +65,8 @@ export const productsData = [
     name: 'The Silky Vase',
     price: 125,
     desription: '',
+    traits: [],
+    dimesions: [],
   },
 ];
 

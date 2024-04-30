@@ -12,8 +12,14 @@ function Product({ id }: ProductProps) {
   const { image, name, desription, price } = product;
   return (
     <BlockWithImage>
-      <div className="w-1/2">
+      <div className="h-[300px] w-full">
         <Image src={image} alt={name} />
+      </div>
+      <div>
+        <h2>{name}</h2>
+        <h3>{price}</h3>
+        <h4>Product description</h4>
+        <p>{desription}</p>
       </div>
     </BlockWithImage>
   );
