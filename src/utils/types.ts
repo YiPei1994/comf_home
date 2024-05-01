@@ -4,6 +4,8 @@ export type Product = {
   name: string;
   price: number;
   desription: string;
+  traits:string[],
+  dimesions:string[]
 };
 
 export type ProdcutLink = {

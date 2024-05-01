@@ -34,9 +34,9 @@ function RotatingProducts({ products }: RotatingProductsProps) {
     <div className="relative my-[20px] flex min-h-[350px] w-[70%] md:min-h-[420px] lg:w-[55%] xl:h-auto xl:w-full xl:gap-16">
       {products.map((product) => (
         <div
-          className={`absolute h-full max-h-0 w-full opacity-0 transition-all duration-300 xl:relative ${productNumber === product.id ? 'max-h-auto opacity-100' : ''} ${product.id % 2 === 0 ? 'xl:-top-10' : 'xl:top-10'} xl:max-h-max xl:opacity-100 `}
+          className={`absolute h-full max-h-0 w-full opacity-0 transition-all duration-300 xl:relative ${productNumber === product.id ? 'max-h-auto opacity-100' : ''}  xl:max-h-max xl:opacity-100 xl:odd:-top-10 xl:even:top-10 `}
         >
-          <div className="mb-4 h-[300px] w-full overflow-hidden">
+          <div className="mb-4 h-[380px] w-full overflow-hidden">
             <Image src={product.image} alt={product.name} />
           </div>
           <div className="text-left text-white">
