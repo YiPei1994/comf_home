@@ -10,7 +10,7 @@ function SearchItemsList({ products }: SearchItemsListProps) {
     <ul className="flex flex-col gap-4">
       {products.map((product) => (
         <li className=" flex items-center gap-4  bg-white" key={product.id}>
-          <div className="flex h-auto w-16 items-center justify-center overflow-hidden">
+          <div className="flex h-auto w-12 items-center justify-center overflow-hidden">
             <Image src={product.image} alt={product.name} />{' '}
           </div>
           <p>{product.name}</p>

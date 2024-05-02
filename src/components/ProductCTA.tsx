@@ -3,27 +3,32 @@ import { LuMinus } from 'react-icons/lu';
 import { LuPlus } from 'react-icons/lu';
 import { useProductQuantity } from '../store/ProductStore';
 import { Product } from '../utils/types';
+import { useCart } from '../store/CartStore';
 
 type ProductCTAProps = {
   product: Product;
 };
 
 function ProductCTA({ product }: ProductCTAProps) {
-  const {
-    quantity,
-    increaseQuantity,
-    decreaseQuantity,
-    setQuantity,
-    addProduct,
-  } = useProductQuantity();
-
+  const { quantity, increaseQuantity, decreaseQuantity, setQuantity } =
+    useProductQuantity();
+  const { addToCart, cartProducts, updateCartQuantity } = useCart();
   function handleAdd() {
     if (!product) return;
     const cartProduct = {
       product,
       quantity,
     };
-    addProduct(cartProduct);
+    const exist = cartProducts.find(
+      (cartProduct) => cartProduct.product.id === product.id,
+    );
+    if (exist) {
+      updateCartQuantity(quantity, product.id);
+    } else {
+      addToCart(cartProduct);
+    }
+
+    setQuantity(1);
   }
 
   return (
