@@ -4,12 +4,17 @@ export type Product = {
   name: string;
   price: number;
   desription: string;
-  traits:string[],
-  dimesions:string[]
+  traits: string[];
+  dimesions: string[];
 };
 
 export type ProdcutLink = {
   id: number;
   name: string;
   to: string;
+};
+
+export type CartProduct = {
+  product: Product;
+  quantity: number;
 };

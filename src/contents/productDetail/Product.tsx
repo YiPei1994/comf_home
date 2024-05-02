@@ -39,7 +39,7 @@ function Product({ id }: ProductProps) {
             </li>
           ))}
         </ul>
-        <ProductCTA />
+        <ProductCTA product={product} />
       </div>
     </BlockWithImage>
   );
