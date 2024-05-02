@@ -5,6 +5,7 @@ import Image from '../../components/Image';
 import { productsData } from '../../utils/Data';
 import { shuffleProduct } from '../../utils/helper';
 import { Product } from '../../utils/types';
+import { Link } from '@tanstack/react-router';
 
 function ProductList({ children }: PropsWithChildren) {
   const selected = shuffleProduct(productsData, 4);
@@ -35,13 +36,15 @@ type ProductProps = {
 function ProductItem({ product }: ProductProps) {
   return (
     <div className="mb-10 w-[46%] lg:w-[22%]">
-      <div className="mb-4  h-[240px] w-full overflow-hidden md:h-[280px] lg:h-[320px] xl:h-[380px]">
-        <Image src={product.image} alt={product.name} />
-      </div>
-      <div className="text-darkprimary text-left ">
-        <p className="mb-2 text-xl">{product.name}</p>
-        <p className="text-xl">€ {product.price}</p>
-      </div>
+      <Link to={`/products/${product.id}`}>
+        <div className="mb-4  h-[240px] w-full overflow-hidden md:h-[280px] lg:h-[320px] xl:h-[380px]">
+          <Image src={product.image} alt={product.name} />
+        </div>
+        <div className="text-darkprimary text-left ">
+          <p className="mb-2 text-xl">{product.name}</p>
+          <p className="text-xl">€ {product.price}</p>
+        </div>
+      </Link>
     </div>
   );
 }

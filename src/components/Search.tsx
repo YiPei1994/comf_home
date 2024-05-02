@@ -33,7 +33,7 @@ function Search({ className }: SearchProps) {
   return (
     <>
       {' '}
-      <div className={cn('ml-auto md:hidden', className)}>
+      <div className={cn('ml-auto cursor-pointer md:hidden', className)}>
         <MdSearch onClick={() => setShowSearchInput()} />
       </div>{' '}
       <div

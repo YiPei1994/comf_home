@@ -7,7 +7,7 @@ type UserProps = {
 function User({ className }: UserProps) {
   return (
     <div className={cn('flex items-center gap-4', className)}>
-      <LuUserCircle2 className="xl:text-xl" />
+      <LuUserCircle2 className="cursor-pointer xl:text-xl" />
     </div>
   );
 }
