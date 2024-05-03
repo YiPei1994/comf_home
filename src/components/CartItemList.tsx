@@ -1,6 +1,5 @@
 import { useCart } from '../store/CartStore';
 import { CartProduct } from '../utils/types';
-import Button from './Button';
 import Image from './Image';
 import { LuMinus } from 'react-icons/lu';
 import { LuPlus } from 'react-icons/lu';

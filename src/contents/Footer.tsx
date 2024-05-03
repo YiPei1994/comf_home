@@ -7,7 +7,7 @@ import { menu, navlinks, categories } from '../utils/Data';
 
 function Footer() {
   return (
-    <Block className="bg-darkprimary  xl:flex-row xl:flex-wrap xl:items-stretch xl:gap-0">
+    <Block className="bg-darkprimary  mt-auto xl:flex-row xl:flex-wrap xl:items-stretch xl:gap-0">
       <div className="flex w-full flex-wrap justify-between md:flex-nowrap xl:w-1/2 xl:items-start xl:pb-20">
         <List lists={categories}>
           <h4>Categories</h4>

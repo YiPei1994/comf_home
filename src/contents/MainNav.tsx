@@ -19,7 +19,7 @@ function MainNav() {
         <Cart />
         <User />
         <RxHamburgerMenu
-          className="block md:hidden"
+          className="block cursor-pointer md:hidden"
           onClick={() => setShowNavbar()}
         />
       </div>
