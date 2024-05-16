@@ -19,7 +19,7 @@ function ProductList({ children }: PropsWithChildren) {
       </div>
       <Button
         type="button"
-        className="bg-side text-darkprimary hover:text-side"
+        className="hover:text-side"
       >
         View colletion
       </Button>

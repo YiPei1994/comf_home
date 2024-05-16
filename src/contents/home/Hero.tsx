@@ -13,7 +13,7 @@ function Hero() {
           through to furniture today
         </p>
         <Button
-          className="bg-side text-primary hover:bg-darkprimary hover:text-side px-6 py-3 transition-all duration-300 md:w-fit"
+          className=" px-6 py-3 transition-all duration-300 md:w-fit"
           type="button"
         >
           View collection
